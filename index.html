@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pro">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajak Putuwar — Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- CURSOR (pro mode) -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- THEME TOGGLE -->
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+        <span class="toggle-icon" id="toggleIcon">🎪</span>
+        <span id="toggleText">Silly Mode</span>
+    </button>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="#home" class="nav-brand">R<span>.</span>Putuwar</a>
+            <ul class="nav-links mb-0">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-grid-bg"></div>
+        <div class="silly-doodles">
+            <span class="doodle">🚀</span>
+            <span class="doodle">☕</span>
+            <span class="doodle">🐛</span>
+            <span class="doodle">💻</span>
+            <span class="doodle">🤯</span>
+            <span class="doodle">🍕</span>
+        </div>
+        <div class="hero-glow"></div>
+        <div class="hero-glow2"></div>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="hero-tag fade-up">
+                        <span data-pro="Available for Work" data-silly="🎉 Currently Not Sleeping at My Desk">Available
+                            for
+                            Work</span>
+                    </div>
+                    <h1 class="hero-title fade-up">
+                        <span data-pro="Rajak" data-silly="Rajak">Rajak</span><br />
+                        <span class="highlight" data-pro="Putuwar" data-silly="Putuwar">Putuwar</span>
+                    </h1>
+                    <div class="hero-subtitle fade-up">
+                        <span class="typewriter-text" id="typewriter"></span><span class="typewriter-cursor"></span>
+                    </div>
+                    <p class="hero-desc fade-up"
+                        data-pro="Think of me as the glue between what users click and what the server understands — stitching together design and logic to bring digital ideas to life."
+                        data-silly="I write code so clean it sparks joy. I once fixed a bug at 3am and cried a little — but like, happy tears. Mostly. I talk to my terminal. It usually ignores me. 🙃">
+                        Think of me as the glue between what users click and what the server understands — stitching
+                        together design
+                        and logic to bring digital ideas to life.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap fade-up">
+                        <a href="#contact" class="btn-primary-custom">
+                            <i class="bi bi-arrow-right-circle"></i>
+                            <span data-pro="Get In Touch" data-silly="Hire Me Please 🥺">Get In Touch</span>
+                        </a>
+                        <a href="#resume" class="btn-outline-custom">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span data-pro="View Resume" data-silly="See My Credentials (pls)">View Resume</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats fade-up">
+                        <div>
+                            <div class="stat-num">5+</div>
+                            <div class="stat-label" data-pro="Projects" data-silly="Projects Done (and survived)">
+                                Projects</div>
+                        </div>
+                        <div>
+                            <div class="stat-num">2+</div>
+                            <div class="stat-label" data-pro="Years Exp" data-silly="Years of StackOverflow">Years Exp
+                            </div>
+                        </div>
+                        <div>
+                            <div class="stat-num">∞</div>
+                            <div class="stat-label" data-pro="Frameworks" data-silly="Coffees Consumed">Frameworks</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="hero-avatar-wrap fade-up">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-ring2"></div>
+                        <img src="https://www.rajakputuwar.com.np/assets/img/profile/profile1.webp" alt="Rajak Putuwar"
+                            class="avatar-img"
+                            onerror="this.src='https://ui-avatars.com/api/?name=Rajak+Putuwar&background=13171f&color=4fffb0&size=260&font-size=0.4&bold=true'" />
+                        <div class="avatar-badge">
+                            <div class="badge-dot"></div>
+                            <span data-pro="Open to Opportunities" data-silly="Will Code for Snacks 🍕">Open to
+                                Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+        <div class="marquee-track" id="marqueeTrack">
+            <div class="marquee-item"><span>✦</span>Django</div>
+            <div class="marquee-item"><span>✦</span>Laravel</div>
+            <div class="marquee-item"><span>✦</span>React</div>
+            <div class="marquee-item"><span>✦</span>Vue.js</div>
+            <div class="marquee-item"><span>✦</span>REST APIs</div>
+            <div class="marquee-item"><span>✦</span>React Native</div>
+            <div class="marquee-item"><span>✦</span>CI/CD</div>
+            <div class="marquee-item"><span>✦</span>GitHub Actions</div>
+            <div class="marquee-item"><span>✦</span>PostgreSQL</div>
+            <div class="marquee-item"><span>✦</span>Full Stack Developer</div>
+            <div class="marquee-item"><span>✦</span>Django</div>
+            <div class="marquee-item"><span>✦</span>Laravel</div>
+            <div class="marquee-item"><span>✦</span>React</div>
+            <div class="marquee-item"><span>✦</span>Vue.js</div>
+            <div class="marquee-item"><span>✦</span>REST APIs</div>
+            <div class="marquee-item"><span>✦</span>React Native</div>
+            <div class="marquee-item"><span>✦</span>CI/CD</div>
+            <div class="marquee-item"><span>✦</span>GitHub Actions</div>
+            <div class="marquee-item"><span>✦</span>PostgreSQL</div>
+            <div class="marquee-item"><span>✦</span>Full Stack Developer</div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-5">
+                    <div class="section-tag fade-up">
+                        <span data-pro="Who I Am" data-silly="🤔 Who Even Am I?">Who I Am</span>
+                    </div>
+                    <h2 class="section-title fade-up" data-pro="Passionate About Creating Digital Experiences"
+                        data-silly="I Make Websites That Don't Look Like They Were Built in 2003">Passionate About
+                        Creating Digital
+                        Experiences</h2>
+                    <p class="fade-up"
+                        style="color: var(--muted); font-size: 0.95rem; line-height: 1.9; margin-top: 1.5rem;"
+                        data-pro="I'm a passionate full-stack developer with hands-on experience building modern web and mobile applications using Django, Laravel, React, and Vue.js. I specialize in robust APIs, clean user interfaces, and high-performance backend systems."
+                        data-silly="I'm a full-stack developer who has made peace with the fact that CSS is chaos, and I thrive in that chaos. I use Django, Laravel, React, and Vue.js — basically I collect frameworks like Pokémon. I write code that even my future self can understand. SOMETIMES.">
+                        I'm a passionate full-stack developer with hands-on experience building modern web and mobile
+                        applications
+                        using <strong style="color: var(--text);">Django, Laravel, React,</strong> and <strong
+                            style="color: var(--text);">Vue.js</strong>. I specialize in robust APIs, clean user
+                        interfaces, and
+                        high-performance backend systems.
+                    </p>
+                    <p class="fade-up"
+                        style="color: var(--muted); font-size: 0.95rem; line-height: 1.9; margin-top: 1rem;"
+                        data-pro="I enjoy turning complex challenges into efficient, scalable digital solutions — whether freelancing or collaborating with teams, I aim to write clean code and deliver impactful results."
+                        data-silly="I turn 'it works on my machine 🤷' into 'it actually works for everyone'. A genuine miracle, honestly. My git commit messages have evolved from 'fix' to 'fix final' to 'fix FINAL actual for real this time'.">
+                        I enjoy turning complex challenges into efficient, scalable digital solutions — whether
+                        freelancing or
+                        collaborating with teams, I aim to write clean code and deliver impactful results.
+                    </p>
+                    <div class="stack-wrap fade-up">
+                        <span class="stack-pill">Django</span>
+                        <span class="stack-pill">Laravel</span>
+                        <span class="stack-pill">React</span>
+                        <span class="stack-pill">Vue.js</span>
+                        <span class="stack-pill">React Native</span>
+                        <span class="stack-pill">DRF</span>
+                        <span class="stack-pill">PostgreSQL</span>
+                        <span class="stack-pill">GitHub Actions</span>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="about-card fade-up">
+                        <div class="info-row">
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt info-icon"></i>
+                                <div>
+                                    <div class="info-label" data-pro="Location" data-silly="Currently Trapped In">
+                                        Location</div>
+                                    <div class="info-value" data-pro="Kathmandu, Nepal"
+                                        data-silly="Kathmandu, Nepal 🏔️ (Yes, we have WiFi)">Kathmandu, Nepal</div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-envelope info-icon"></i>
+                                <div>
+                                    <div class="info-label" data-pro="Email" data-silly="Carrier Pigeon Address">Email
+                                    </div>
+                                    <div class="info-value">rajakputuwar07@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meta-grid fade-up" style="margin-top: 1rem;">
+                        <div class="meta-item">
+                            <div class="meta-key" data-pro="Specialization" data-silly="My Superpower">Specialization
+                            </div>
+                            <div class="meta-val" data-pro="Web Development" data-silly="Making Things Click 🖱️">Web
+                                Development
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-key" data-pro="Experience Level" data-silly="Current XP Level">Experience
+                                Level</div>
+                            <div class="meta-val" data-pro="Mid Professional" data-silly="Not a Wizard Yet 🧙">Mid
+                                Professional</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-key" data-pro="Education" data-silly="Survived School">Education</div>
+                            <div class="meta-val" data-pro="BCA, TIC" data-silly="BCA, TIC 🎓 (barely)">BCA, TIC</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-key" data-pro="Languages" data-silly="Can Communicate In">Languages</div>
+                            <div class="meta-val" data-pro="English, Nepali" data-silly="English, Nepali & Python 🐍">
+                                English, Nepali
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mt-4 fade-up">
+                        <a href="mailto:rajakputuwar07@gmail.com" class="btn-primary-custom">
+                            <i class="bi bi-chat-dots"></i>
+                            <span data-pro="Let's Talk" data-silly="Shoot Your Shot 🎯">Let's Talk</span>
+                        </a>
+                        <a href="#" class="btn-outline-custom">
+                            <i class="bi bi-download"></i>
+                            <span data-pro="Download CV" data-silly="Download My Life Story">Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-tag fade-up" style="justify-content: center;">
+                    <span data-pro="Technical Arsenal" data-silly="🎒 Stuff I Know (Mostly)">Technical Arsenal</span>
+                </div>
+                <h2 class="section-title fade-up" data-pro="Skills & Expertise"
+                    data-silly="Things I Can Do Without Googling (Sometimes)">Skills & Expertise</h2>
+                <p class="fade-up"
+                    style="color: var(--muted); font-size: 0.95rem; max-width: 550px; margin: 1rem auto 0;"
+                    data-pro="Proficient in building full-stack applications with modern frontend frameworks and robust backend systems."
+                    data-silly="I Googled most of these to double-check. The bars are real. Mostly. Don't quiz me at a party.">
+                    Proficient in building full-stack applications with modern frontend frameworks and robust backend
+                    systems.
+                </p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="skills-category fade-up">
+                        <div class="category-label">
+                            <span data-pro="Front-end Development" data-silly="🎨 Pretty Pixel Stuff">Front-end
+                                Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML / CSS</span>
+                                <span class="skill-pct" data-pro="90%" data-silly="90% ✅">90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="90"></div>
+                            </div>
+                            <div class="skill-note" data-pro="Semantic HTML5 and modern CSS3 techniques"
+                                data-silly="I center divs on the FIRST try. Almost.">Semantic HTML5 and modern CSS3
+                                techniques</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="80"></div>
+                            </div>
+                            <div class="skill-note" data-pro="ES6+, DOM manipulation, and modern frameworks"
+                                data-silly="undefined is not a function? Not on my watch.">ES6+, DOM manipulation, and
+                                modern frameworks
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React</span>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="75"></div>
+                            </div>
+                            <div class="skill-note" data-pro="Hooks, state management, component architecture"
+                                data-silly="useState, useEffect, useCrying — I know them all.">Hooks, state management,
+                                component
+                                architecture</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Vue.js</span>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="75"></div>
+                            </div>
+                            <div class="skill-note" data-pro="Options API, Vue Router, and Vuex"
+                                data-silly="The friendly framework. It gives me fewer trust issues.">Options API, Vue
+                                Router, and Vuex
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skills-category fade-up">
+                        <div class="category-label" style="color: var(--accent2);">
+                            <span data-pro="Back-end Development" data-silly="🧙 Backend Wizardry">Back-end
+                                Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Full-Stack (Django, Laravel)</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="85"></div>
+                            </div>
+                            <div class="skill-note" data-pro="MVC, Eloquent ORM, REST API development"
+                                data-silly="Django is my bestie. Laravel is my side bestie.">MVC, Eloquent ORM, REST API
+                                development
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">API Development</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="80"></div>
+                            </div>
+                            <div class="skill-note" data-pro="Django REST Framework, Laravel API Resources"
+                                data-silly="I make APIs so RESTful they deserve a nap.">Django REST Framework, Laravel
+                                API Resources
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">SQL / Databases</span>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="75"></div>
+                            </div>
+                            <div class="skill-note" data-pro="Database design, optimization, complex queries"
+                                data-silly="DROP TABLE regrets; (j/k I always backup first)">Database design,
+                                optimization, complex
+                                queries</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">DevOps & CI/CD</span>
+                                <span class="skill-pct">50%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="50"></div>
+                            </div>
+                            <div class="skill-note" data-pro="GitHub Actions, Apache, WSL2 deployment"
+                                data-silly="It works. I don't always know why. That's fine.">GitHub Actions, Apache,
+                                WSL2 deployment
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume">
+        <div class="container">
+            <div class="mb-5">
+                <div class="section-tag fade-up">
+                    <span data-pro="Experience & Education" data-silly="📜 My Villain Origin Story">Experience &
+                        Education</span>
+                </div>
+                <h2 class="section-title fade-up" data-pro="Resume"
+                    data-silly="How I Got Here (It Involved a Lot of Stack Overflow)">Resume</h2>
+                <p class="fade-up" style="color: var(--muted); font-size: 0.95rem; max-width: 600px; margin-top: 1rem;"
+                    data-pro="A results-driven full-stack developer delivering scalable solutions, robust APIs, and streamlined workflows."
+                    data-silly="I've been professionally confused since 2022 and somehow that's worked out great for everyone.">
+                    A results-driven full-stack developer delivering scalable solutions, robust APIs, and streamlined
+                    workflows.
+                </p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="category-label fade-up" style="color: var(--accent); margin-bottom: 2rem;">
+                        <span data-pro="Professional Experience"
+                            data-silly="💼 Places I've Survived Working At">Professional
+                            Experience</span>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item fade-up">
+                            <div class="timeline-period">2024 — Present</div>
+                            <div class="timeline-role" data-pro="Full-Stack Developer"
+                                data-silly="Professional Bug Whisperer 🐛">
+                                Full-Stack Developer</div>
+                            <div class="timeline-org">Upveda Technology</div>
+                            <ul class="timeline-bullets">
+                                <li data-pro="Developed full-stack web and mobile apps using Django REST Framework, Laravel, React, and Vue.js"
+                                    data-silly="Built apps so smooth, clients forgot they were supposed to ask for changes">
+                                    Developed
+                                    full-stack web and mobile apps using Django REST Framework, Laravel, React, and
+                                    Vue.js</li>
+                                <li data-pro="Integrated third-party services including Google Sheets API and OpenStreetMap"
+                                    data-silly="Taught Google Sheets and Maps to talk to each other. They were awkward at first.">
+                                    Integrated third-party services including Google Sheets API and OpenStreetMap</li>
+                                <li data-pro="Optimized backend performance with efficient querysets, custom serializers, and caching strategies"
+                                    data-silly="Made the database go ZOOM instead of zzzzz. You're welcome, server.">
+                                    Optimized backend
+                                    performance with efficient querysets, custom serializers, and caching strategies
+                                </li>
+                                <li data-pro="Set up CI/CD pipelines using GitHub Actions and handled secure deployments on Ubuntu servers via Apache"
+                                    data-silly="Automated deployments so I could sleep at night. Spoiler: still checked Slack at 2am.">
+                                    Set
+                                    up CI/CD pipelines using GitHub Actions and handled deployments on Ubuntu servers
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item fade-up">
+                            <div class="timeline-period">2022 — 2024</div>
+                            <div class="timeline-role" data-pro="Web Developer Intern / Junior Developer"
+                                data-silly="Intern (aka Professional Coffee Learner) ☕">Web Developer Intern / Junior
+                                Developer</div>
+                            <div class="timeline-org">Upveda Technology / College Projects</div>
+                            <ul class="timeline-bullets">
+                                <li data-pro="Built modular CRUD applications with Laravel and Vue.js following RESTful architecture"
+                                    data-silly="CRUD apps with Laravel. Create, Read, Update, Delete... and hope nobody notices the edge cases.">
+                                    Built modular CRUD applications with Laravel and Vue.js</li>
+                                <li data-pro="Designed and implemented dynamic forms and reporting tools for internal dashboards"
+                                    data-silly="Made forms that people actually filled in. A genuine achievement in web history.">
+                                    Designed
+                                    dynamic forms and reporting tools for internal dashboards</li>
+                                <li data-pro="Collaborated using Git, handled API integration, and implemented JWT-based authentication"
+                                    data-silly="Learned Git the hard way. git push --force once. ONCE. Never again.">
+                                    Collaborated with
+                                    Git, API integration, and JWT authentication</li>
+                                <li data-pro="Worked on a vegetable market price tracker with predictive logic based on demand, supply, and weather"
+                                    data-silly="Built a veggie price predictor. Turns out, spinach is unpredictable. Like life.">
+                                    Worked on
+                                    a vegetable market price tracker with predictive logic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="category-label fade-up" style="color: var(--accent2); margin-bottom: 2rem;">
+                        <span data-pro="Education" data-silly="🎓 Stuff I Paid to Learn">Education</span>
+                    </div>
+                    <div class="fade-up">
+                        <div class="edu-card">
+                            <div class="edu-period">2021 — 2025</div>
+                            <div class="edu-degree" data-pro="Bachelors of Computer Application"
+                                data-silly="Bachelors of Computer Application 🖥️">Bachelors of Computer Application
+                            </div>
+                            <div class="edu-institution" data-pro="Texas International College, Kathmandu"
+                                data-silly="Texas International College (the Kathmandu one, not Texas)">Texas
+                                International College,
+                                Kathmandu</div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-period">2019 — 2020</div>
+                            <div class="edu-degree">Higher Secondary (+2)</div>
+                            <div class="edu-institution">KIST &nbsp;·&nbsp; CGPA: 3.08</div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-period">2018</div>
+                            <div class="edu-degree">SEE (School Leaving Certificate)</div>
+                            <div class="edu-institution">Shree Bajrayoginee Secondary English School &nbsp;·&nbsp; GPA:
+                                3.65</div>
+                        </div>
+                    </div>
+                    <div class="fade-up mt-4">
+                        <a href="#" class="btn-primary-custom w-100 justify-content-center">
+                            <i class="bi bi-download"></i>
+                            <span data-pro="Download Full Resume" data-silly="Take My Life, Please 📄">Download Full
+                                Resume</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-tag fade-up" style="justify-content: center;">
+                    <span data-pro="Social Proof" data-silly="👀 What My Friends Say (Unprompted, I Swear)">Social
+                        Proof</span>
+                </div>
+                <h2 class="section-title fade-up" data-pro="What People Say"
+                    data-silly="Real Humans Who Voluntarily Praised Me">What People Say</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 fade-up">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"He works extremely hard and constantly goes above and beyond to
+                            produce
+                            excellent results. His keen ability to tackle complex tasks and create workable solutions is
+                            what really
+                            makes him stand out."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RB</div>
+                            <div>
+                                <div class="author-name">Ravi Bhattarai</div>
+                                <div class="author-role">Senior Full Stack Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-up">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"It's been a real pleasure working with Rajak. He is a guy who is
+                            hardworking,
+                            co-operative, eager to learn and always ready to contribute."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div>
+                                <div class="author-name">Anish KC</div>
+                                <div class="author-role">Senior Full Stack Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-up">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Seeing him learn and master both frontend and backend has really
+                            inspired me.
+                            His careful eye and honest feedback have made my work better."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PM</div>
+                            <div>
+                                <div class="author-name">Pratik Mulguthi</div>
+                                <div class="author-role">Game Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-up">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"He is an exceptional colleague to work with — technically
+                            proficient and
+                            consistently delivers high quality work within deadlines. Strong decision-making and a
+                            creative mindset."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RL</div>
+                            <div>
+                                <div class="author-name">Rojal Luitel</div>
+                                <div class="author-role">UI/UX Designer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-up">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"He is a technically driven person who has a great personality and
+                            expert
+                            knowledge in problem solving."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SK</div>
+                            <div>
+                                <div class="author-name">Sumon Khadka</div>
+                                <div class="author-role">Senior Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-up">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Awesome guy to share the same workspace — an energetic personality
+                            eager to
+                            learn new skills. His professional drive is evident, complemented by a wide range of domain
+                            knowledge."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RA</div>
+                            <div>
+                                <div class="author-name">Rajendra Acharya</div>
+                                <div class="author-role">DevOps Engineer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="section-tag fade-up">
+                        <span data-pro="Get In Touch" data-silly="📬 Drop Me a Message (I Check It!)">Get In
+                            Touch</span>
+                    </div>
+                    <h2 class="section-title fade-up" data-pro="Let's Work Together"
+                        data-silly="Let's Build Something & Maybe Grab Pizza 🍕">Let's Work Together</h2>
+                    <p class="fade-up"
+                        style="color: var(--muted); font-size: 0.95rem; line-height: 1.9; margin-top: 1.5rem;"
+                        data-pro="Feel free to reach out for collaborations, project inquiries, or just to say hello. I'm always open to discussing new opportunities and challenges."
+                        data-silly="Reach out! I respond faster to emails than I respond to bugs in production. That's a compliment to your email, not a criticism of my debugging.">
+                        Feel free to reach out for collaborations, project inquiries, or just to say hello.
+                    </p>
+                    <div class="contact-card fade-up" style="margin-top: 2rem;">
+                        <div class="contact-info-item">
+                            <div class="contact-icon-wrap"><i class="bi bi-geo-alt"></i></div>
+                            <div>
+                                <div class="contact-label" data-pro="Location" data-silly="My Coordinates">Location
+                                </div>
+                                <div class="contact-val" data-pro="Kathmandu, Nepal" data-silly="Kathmandu, Nepal 🏔️">
+                                    Kathmandu, Nepal
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon-wrap"><i class="bi bi-envelope"></i></div>
+                            <div>
+                                <div class="contact-label" data-pro="Email" data-silly="Internet Letters">Email</div>
+                                <div class="contact-val">rajakputuwar07@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon-wrap"><i class="bi bi-telephone"></i></div>
+                            <div>
+                                <div class="contact-label" data-pro="Phone" data-silly="Voice Box Number">Phone</div>
+                                <div class="contact-val">+977 98########</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-card fade-up">
+                        <form class="contact-form" onsubmit="return false;">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label data-pro="Your Name"
+                                            data-silly="Your Name (or nickname, I don't judge)">Your Name</label>
+                                        <input type="text" placeholder="John Doe" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label data-pro="Email Address" data-silly="Your Digital Address">Email
+                                            Address</label>
+                                        <input type="email" placeholder="john@example.com" />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label data-pro="Subject" data-silly="What's On Your Mind?">Subject</label>
+                                        <input type="text" data-pro-placeholder="Project Inquiry"
+                                            data-silly-placeholder="I have a crazy idea..."
+                                            placeholder="Project Inquiry" />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label data-pro="Message"
+                                            data-silly="Your Thoughts (be kind 🥺)">Message</label>
+                                        <textarea rows="5" data-pro-placeholder="Tell me about your project..."
+                                            data-silly-placeholder="Hi Rajak! I need a website and also I think you're cool..."
+                                            placeholder="Tell me about your project..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-primary-custom w-100 justify-content-center">
+                                        <i class="bi bi-send"></i>
+                                        <span data-pro="Send Message" data-silly="Launch Message Into The Void 🚀">Send
+                                            Message</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                <div>
+                    <div class="footer-brand">Rajak<span>.</span>Putuwar</div>
+                    <div class="footer-text mt-1" data-pro="Full Stack Developer · Kathmandu, Nepal"
+                        data-silly="Full Stack Developer · Powered by Caffeine ☕ · Kathmandu, Nepal">Full Stack
+                        Developer ·
+                        Kathmandu, Nepal</div>
+                </div>
+                <div class="footer-text" data-pro="© 2025 Rajak Putuwar. All rights reserved."
+                    data-silly="© 2025 Rajak Putuwar · No bugs were harmed in the making of this site (maybe one)">©
+                    2025 Rajak
+                    Putuwar. All rights reserved.</div>
+                <div class="social-links">
+                    <a href="mailto:rajakputuwar07@gmail.com" class="social-link"><i class="bi bi-envelope"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
