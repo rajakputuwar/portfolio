@@ -74,7 +74,7 @@
     }
 
     [data-theme="silly"] body,
-    [data-theme="silly"] * { cursor: auto !important; }
+    [data-theme="silly"] * { cursor: pointer !important; }
     [data-theme="silly"] .cursor,
     [data-theme="silly"] .cursor-follower { display: none; }
 
