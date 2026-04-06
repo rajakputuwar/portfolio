@@ -85,7 +85,7 @@ function updateContent(theme) {
     icon.textContent = "🎩";
     text.textContent = "Pro Mode";
   } else {
-    icon.textContent = "🎪";
+    icon.textContent = "🛸";
     text.textContent = "Silly Mode";
   }
 }
@@ -109,6 +109,60 @@ function toggleTheme() {
   deleting = false;
   document.getElementById("typewriter").textContent = "";
 }
+
+const themeToggle = document.getElementById("themeToggle");
+let isDraggingThemeToggle = false;
+let dragStartRect = null;
+let dragOffsetX = 0;
+let dragOffsetY = 0;
+
+themeToggle.addEventListener("pointerdown", (event) => {
+  event.preventDefault();
+  dragStartRect = themeToggle.getBoundingClientRect();
+  dragOffsetX = event.clientX - dragStartRect.left;
+  dragOffsetY = event.clientY - dragStartRect.top;
+  isDraggingThemeToggle = false;
+  themeToggle.setPointerCapture(event.pointerId);
+});
+
+themeToggle.addEventListener("pointermove", (event) => {
+  if (!themeToggle.hasPointerCapture(event.pointerId)) return;
+  const moveX = event.clientX - dragOffsetX;
+  const moveY = event.clientY - dragOffsetY;
+
+  if (!isDraggingThemeToggle) {
+    const dx = moveX - dragStartRect.left;
+    const dy = moveY - dragStartRect.top;
+    if (Math.hypot(dx, dy) < 6) return;
+    isDraggingThemeToggle = true;
+    themeToggle.classList.add("dragging");
+  }
+
+  themeToggle.style.right = "auto";
+  themeToggle.style.bottom = "auto";
+  themeToggle.style.left = Math.min(window.innerWidth - themeToggle.offsetWidth - 16, Math.max(16, moveX)) + "px";
+  themeToggle.style.top = Math.min(window.innerHeight - themeToggle.offsetHeight - 16, Math.max(16, moveY)) + "px";
+});
+
+themeToggle.addEventListener("pointerup", (event) => {
+  if (themeToggle.hasPointerCapture(event.pointerId)) {
+    themeToggle.releasePointerCapture(event.pointerId);
+  }
+  if (isDraggingThemeToggle) {
+    event.preventDefault();
+  }
+  themeToggle.classList.remove("dragging");
+});
+
+themeToggle.addEventListener("click", (event) => {
+  if (isDraggingThemeToggle) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    isDraggingThemeToggle = false;
+    return;
+  }
+  toggleTheme();
+});
 
 /* ===========================
            CURSOR
