@@ -83,10 +83,10 @@ function updateContent(theme) {
   const text = document.getElementById("toggleText");
   if (theme === "silly") {
     icon.textContent = "🎩";
-    text.textContent = "Pro Mode";
+    text.textContent = "Pro Mode -> ";
   } else {
     icon.textContent = "🛸";
-    text.textContent = "Silly Mode";
+    text.textContent = "Silly Mode -> ";
   }
 }
 
